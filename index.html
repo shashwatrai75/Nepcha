@@ -1,0 +1,1735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nepcha Header Clone</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <!-- Loading Overlay -->
+  <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+    <div class="loading-spinner">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    Free shipping on all orders of $80 or more.
+  </div>
+
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo-top-strip">
+      <img src="images/Logo2.png" alt="nepcha logo" class="logo2-image">
+    </div>
+    <div class="header-content">
+      <!-- Search -->
+      <div class="search-container">
+        <svg class="search-icon" width="24" height="24" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <input type="text" placeholder="Search products..." class="search-input">
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.jpg" alt="nepcha" class="logo-image">
+      </div>
+
+      <!-- Right Icons -->
+      <div class="header-icons">
+        <!-- User/Login -->
+        <a href="#" class="icon-link" onclick="openLoginModal()">
+          <svg width="24" height="24" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4 8-4 8-4s8 0 8 4"/>
+          </svg>
+          <span class="login-text">LOGIN / SIGN UP</span>
+        </a>
+        <!-- Wishlist -->
+        <a href="#" class="icon-link">
+          <span class="icon-badge">0</span>
+          <svg width="28" height="28" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+          </svg>
+        </a>
+        <!-- Cart -->
+        <a href="#" class="icon-link">
+          <span class="icon-badge">0</span>E
+          <svg width="28" height="28" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"/>
+            <circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+      <a href="#" class="nav-link active">HOME</a>
+      <a href="#" class="nav-link">SHOP</a>
+      <a href="#" class="nav-link">BLOGS</a>
+      <a href="#" class="nav-link">PAGES</a>
+      <a href="#" class="nav-link">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Carousel Section -->
+  <section class="carousel-section">
+    <div class="carousel-container">
+      <!-- Slide 1 -->
+      <div class="carousel-slide active">
+        <div class="slide-background" style="background-image: url('images/background1.jpg');"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <p class="subtext">PACKED WITH VIBRANT FLAVORS</p>
+            <h1 class="main-headline">Summer Teas Are Here</h1>
+            <button class="shop-now-btn">SHOP NOW</button>
+          </div>
+          
+          <!-- Floating Leaves -->
+          <div class="floating-leaves">
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+            <div class="leaf leaf-4"></div>
+            <div class="leaf leaf-5"></div>
+            <div class="leaf leaf-6"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="slide-background" style="background-image: url('images/background2.jpg');"></div>
+        <div class="slide-content">
+          <div class="slide-text">
+            <p class="subtext">PACKED WITH VIBRANT FLAVORS</p>
+            <h1 class="main-headline">Summer Teas Are Here</h1>
+            <button class="shop-now-btn">SHOP NOW</button>
+          </div>
+          
+          <!-- Floating Leaves -->
+          <div class="floating-leaves">
+            <div class="leaf leaf-1"></div>
+            <div class="leaf leaf-2"></div>
+            <div class="leaf leaf-3"></div>
+            <div class="leaf leaf-4"></div>
+            <div class="leaf leaf-5"></div>
+            <div class="leaf leaf-6"></div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <span class="indicator active" onclick="currentSlide(1)"></span>
+      <span class="indicator" onclick="currentSlide(2)"></span>
+    </div>
+  </section>
+
+  <!-- Top Selling Section -->
+  <section class="top-selling-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="shop-text">SHOP OUR TEA</p>
+        <h2 class="section-title">Top Selling</h2>
+      </div>
+      
+      <div class="products-grid">
+        <!-- Product 1: Cinnamon Plum -->
+        <div class="product-card" data-product-id="1" data-product-name="Cinnamon Plum" data-product-price="18.02" data-product-category="Iced Teas">
+          <div class="product-image">
+            <img src="images/cinnamon-plum.jpg" alt="Cinnamon Plum Tea">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Iced Teas</p>
+            <h3 class="product-name">Cinnamon Plum</h3>
+            <p class="product-price">$18.02</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: English Breakfast -->
+        <div class="product-card" data-product-id="2" data-product-name="English Breakfast" data-product-price="11.85" data-product-category="Classic Teas">
+          <div class="product-image">
+            <img src="images/english-breakfast.jpg" alt="English Breakfast Tea">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Classic Teas</p>
+            <h3 class="product-name">English Breakfast</h3>
+            <p class="product-price">$11.85</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3: White Peony -->
+        <div class="product-card" data-product-id="3" data-product-name="White Peony" data-product-price="16.19" data-product-category="Loose Leaf">
+          <div class="product-image">
+            <img src="images/white-peony.jpg" alt="White Peony Tea">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Loose Leaf</p>
+            <h3 class="product-name">White Peony</h3>
+            <p class="product-price">$16.19</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4: Blueberry Hibiscus -->
+        <div class="product-card" data-product-id="4" data-product-name="Blueberry Hibiscus" data-product-price="10.07" data-product-category="Tea Bags">
+          <div class="product-image">
+            <img src="images/blueberry-hibiscus.jpg" alt="Blueberry Hibiscus Tea">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Tea Bags</p>
+            <h3 class="product-name">Blueberry Hibiscus</h3>
+            <p class="product-price">$10.07</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="shop-all-container">
+        <button class="shop-all-btn">SHOP ALL PRODUCTS</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us">
+    <div class="container">
+      <div class="section-header">
+        <p class="core-values">CORE VALUES</p>
+        <h2 class="section-title">Why Choose Nepcha?</h2>
+      </div>
+      
+      <div class="values-grid">
+        <!-- Altitude-Grown Flavor -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="60" height="60" fill="none" stroke="#4CAF50" stroke-width="2" viewBox="0 0 24 24">
+              <!-- Paper bag with leaf -->
+              <rect x="6" y="4" width="12" height="16" rx="2" fill="none"/>
+              <path d="M6 6h12"/>
+              <path d="M8 6v-2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
+              <path d="M4 8l2 2"/>
+              <path d="M20 8l-2 2"/>
+              <path d="M7 12l2 2"/>
+              <path d="M17 12l-2 2"/>
+              <!-- Leaf -->
+              <path d="M5 18c0-1 2-1 2 0s2 1 2 0" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Altitude-Grown Flavor</h3>
+          <p class="value-description">Teas cultivated at 1,000–2,000 meters in the Himalayas develop floral, fruity, and delicate notes with remarkable complexity and naturally high antioxidants.</p>
+        </div>
+
+        <!-- Health Benefits -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="60" height="60" fill="none" stroke="#4CAF50" stroke-width="2" viewBox="0 0 24 24">
+              <!-- Plant with leaves -->
+              <path d="M12 20V10"/>
+              <path d="M12 10c0-2 2-4 4-4s4 2 4 4"/>
+              <path d="M12 10c0-2-2-4-4-4s-4 2-4 4"/>
+              <path d="M8 8l2 2"/>
+              <path d="M16 8l-2 2"/>
+              <path d="M10 6l2 2"/>
+              <path d="M14 6l-2 2"/>
+              <!-- Leaves -->
+              <ellipse cx="8" cy="8" rx="2" ry="1" fill="none"/>
+              <ellipse cx="16" cy="8" rx="2" ry="1" fill="none"/>
+              <ellipse cx="12" cy="6" rx="2" ry="1" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Health Benefits</h3>
+          <p class="value-description">Rich in catechins, flavonoids, and polyphenols, Nepali teas support heart health, digestion, immunity, mental clarity, weight management, and radiant skin.</p>
+        </div>
+
+        <!-- Ethical & Sustainable -->
+        <div class="value-card">
+          <div class="value-icon">
+            <svg width="60" height="60" fill="none" stroke="#4CAF50" stroke-width="2" viewBox="0 0 24 24">
+              <!-- Globe with hands -->
+              <circle cx="12" cy="12" r="8" fill="none"/>
+              <path d="M4 12h16"/>
+              <path d="M12 4a8 8 0 0 1 0 16 8 8 0 0 1 0-16z" fill="none"/>
+              <!-- Hands cupping globe -->
+              <path d="M6 10c0-2 2-4 4-4s4 2 4 4"/>
+              <path d="M14 10c0-2 2-4 4-4s4 2 4 4"/>
+              <!-- Trees growing from globe -->
+              <path d="M10 4l1 2"/>
+              <path d="M14 4l-1 2"/>
+              <path d="M12 2l1 2"/>
+              <!-- Tree canopies -->
+              <circle cx="10" cy="4" r="1" fill="none"/>
+              <circle cx="14" cy="4" r="1" fill="none"/>
+              <circle cx="12" cy="2" r="1" fill="none"/>
+            </svg>
+          </div>
+          <h3 class="value-title">Ethical & Sustainable</h3>
+          <p class="value-description">Nepcha partners directly with Nepali cooperatives for fair wages, organic farming, and regenerative practices—protecting nature and empowering local communities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials Section -->
+  <section class="testimonials-section">
+    <div class="testimonials-background" style="background-image: url('images/garden1.jpg');"></div>
+    <div class="testimonials-content">
+      <div class="testimonials-header">
+        <p class="testimonials-label">CLIENT TESTIMONIALS</p>
+      </div>
+      
+      <div class="testimonial-slide active">
+        <div class="testimonial-quote">
+          "This is by far the best Earl Grey tea I have had. I drink a lot of tea and only drink Earl Grey. The evidence is in the bright, even. You will love the flavor."
+        </div>
+        <div class="testimonial-author">
+          <p class="author-name">SIMON WEAVER</p>
+          <p class="author-title">Wellness Doctor</p>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-quote">
+          "The Himalayan teas from Nepcha are absolutely exceptional. The altitude-grown flavors are unlike anything I've tasted before. Truly remarkable quality."
+        </div>
+        <div class="testimonial-author">
+          <p class="author-name">SARAH MITCHELL</p>
+          <p class="author-title">Tea Connoisseur</p>
+        </div>
+      </div>
+
+      <div class="testimonial-slide">
+        <div class="testimonial-quote">
+          "As a wellness practitioner, I recommend Nepcha teas to all my clients. The health benefits are incredible and the ethical sourcing makes it even better."
+        </div>
+        <div class="testimonial-author">
+          <p class="author-name">DR. JAMES CHEN</p>
+          <p class="author-title">Holistic Health Expert</p>
+        </div>
+      </div>
+
+      <!-- Testimonial Navigation Dots -->
+      <div class="testimonial-dots">
+        <span class="testimonial-dot active" onclick="currentTestimonial(1)"></span>
+        <span class="testimonial-dot" onclick="currentTestimonial(2)"></span>
+        <span class="testimonial-dot" onclick="currentTestimonial(3)"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Articles Section -->
+  <section class="featured-articles">
+    <div class="container">
+      <div class="section-header">
+        <p class="recent-post">RECENT POST</p>
+        <h2 class="section-title">Featured Articles</h2>
+      </div>
+      
+      <div class="articles-grid">
+        <!-- Article 1: Ethnically Diverse Women Entrepreneurs -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/Artcial 1.png" alt="Ethnically Diverse Women Entrepreneurs">
+          </div>
+          <div class="article-meta">
+            <span class="meta-text">ADMIN · AUG 2024</span>
+          </div>
+          <h3 class="article-title">Ethnically Diverse Women Entrepreneurs in Hong Kong</h3>
+          <p class="article-excerpt">Highlighting inspiring women from diverse backgrounds who are shaping the entrepreneurial landscape in Hong Kong.</p>
+          <a href="https://thebeat.asia/hong-kong/venture/profiles/ethnically-diverse-women-entrepreneurs" class="read-more-link" target="_blank" rel="noopener">READ MORE</a>
+        </article>
+
+        <!-- Article 2: Music & Mutual Aid for Minorities -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/Artcial 2.png" alt="Music & Mutual Aid for Minorities">
+          </div>
+          <div class="article-meta">
+            <span class="meta-text">ADMIN · AUG 2024</span>
+          </div>
+          <h3 class="article-title">Music and Community Help Minorities Feel at Home</h3>
+          <p class="article-excerpt">How mutual aid networks and cultural gatherings bring belonging to Hong Kong's ethnic minorities.</p>
+          <a href="https://www.scmp.com/lifestyle/family-relationships/article/3278972/music-and-mutual-aid-help-people-ethnic-minorities-hong-kong-feel-home?fbclid=PAdGRleAMNGDtleHRuA2FlbQIxMQABpxHnydIGZ3MmPyh90o4hHH7CjwSE3XGUmjydY1oP-MXCO1DbXk7q4HYI2iqk_aem_IgjN64DEdI9jlvq7IAw2pw" class="read-more-link" target="_blank" rel="noopener">READ MORE</a>
+        </article>
+
+        <!-- Article 3: Hong Kong's Diverse Businesses -->
+        <article class="article-card">
+          <div class="article-image">
+            <img src="images/Artical 3.png" alt="Hong Kong's Diverse Businesses">
+          </div>
+          <div class="article-meta">
+            <span class="meta-text">ADMIN · AUG 2024</span>
+          </div>
+          <h3 class="article-title">Boosting Visibility for Hong Kong's Ethnically Diverse Businesses</h3>
+          <p class="article-excerpt">Guidefong Bazaar helps minority-owned businesses thrive by showcasing their cultural and commercial contributions.</p>
+          <a href="https://www.scmp.com/video/hong-kong/3279019/hong-kongs-ethnically-diverse-businesses-boost-their-visibility-guidefong-bazaar?fbclid=PAdGRleAMNGGhleHRuA2FlbQIxMQABp2p5_Vy5zpcmVYnpUql6E2awTvADokp8ftlAXsWF8oWwzvoZpq5RkOq2McP3_aem_rrmrLqaLQxIcwV75FybnkA" class="read-more-link" target="_blank" rel="noopener">READ MORE</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder Section -->
+  <section class="founder-section">
+    <div class="container">
+      <div class="founder-content">
+        <div class="founder-text">
+          <h2 class="founder-headline">
+            <span class="founder-greeting">HI! I'M</span>
+            <span class="founder-name">SENCHHELUNG CHEMJONG</span>
+          </h2>
+          <h3 class="founder-subtitle">
+            <span class="founder-role-prefix">FOUNDER OF</span>
+            <span class="founder-role">NEPCHA</span>
+          </h3>
+          <div class="founder-description">
+            <p>I started Nepcha with a vision to connect the world with the authentic taste of Himalayan teas from Nepal. Inspired by my roots and the rich cultural heritage of Nepali tea traditions, I am dedicated to sharing these unique flavors and stories with tea lovers everywhere.</p>
+          </div>
+          <div class="founder-social">
+            <a href="#" class="social-link" title="Facebook">
+              <svg width="20" height="20" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" title="Twitter">
+              <svg width="20" height="20" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" title="LinkedIn">
+              <svg width="20" height="20" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/>
+                <circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" title="Instagram">
+              <svg width="20" height="20" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" title="YouTube">
+              <svg width="20" height="20" fill="none" stroke="#222" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="founder-image">
+          <img src="images/Nepcha owner.png" alt="Nepcha Founder" class="founder-photo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-icon">
+          <svg width="48" height="48" fill="none" stroke="#4CAF50" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h2 class="newsletter-title">Stay Updated</h2>
+        <p class="newsletter-description">Subscribe to our newsletter and get exclusive offers, tea tips, and updates delivered to your inbox.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <div class="newsletter-input-group">
+            <input type="email" id="newsletterEmail" placeholder="Enter your email address" required class="newsletter-input">
+            <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+          </div>
+          <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Left Section: Navigation -->
+        <div class="footer-section">
+          <h3 class="footer-title">Nepcha</h3>
+        </div>
+
+        <!-- Center Section: Contact -->
+        <div class="footer-section">
+          <h3 class="footer-title">Contact us</h3>
+          <div class="contact-info">
+            <div class="contact-group">
+              <h4>Nepcha Office</h4>
+              <p><a href="mailto:discover@nepcha.com">discover@nepcha.com</a></p>
+              <p><a href="tel:+977-1-4XXXXXX">+977-1-4XXXXXX</a></p>
+            </div>
+            <div class="contact-group">
+              <h4>Nepcha Tea Bar</h4>
+              <p>Shop 1, Multicultural Activity Center (MAC)</p>
+              <p>572 Canton Road, Yau Ma Tei, Hong Kong</p>
+              <p>Thu-Sun 12:00-23:00</p>
+              <p>Closed every Mon-Wed</p>
+            </div>
+            <div class="contact-group">
+              <h4>WhatsApp</h4>
+              <p><a href="tel:+977-XXXXXXXXX">+977-XXXXXXXXX</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: Social & Copyright -->
+        <div class="footer-section">
+          <div class="social-links">
+            <a href="#" class="social-icon" title="Instagram">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon" title="Facebook">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+          </div>
+          
+          <div class="footer-bottom">
+            <p class="copyright">© Nepcha 2025</p>
+            <p class="powered-by">Powered by Shopify</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll to Top Button -->
+      <button class="scroll-to-top" onclick="scrollToTop()" aria-label="Scroll to top">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M18 15l-6-6-6 6"/>
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Login/Sign Up Modal -->
+  <div id="loginModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="tab-btn active" id="loginTab" onclick="showTab('login')">Sign in</span>
+        <span class="tab-btn" id="signupTab" onclick="showTab('signup')">Create an Account</span>
+        <button class="close-btn" onclick="closeLoginModal()">×</button>
+      </div>
+      <div class="tab-content" id="loginForm">
+        <form class="login-form">
+          <div class="form-group">
+            <label for="username">Username or email *</label>
+            <input type="text" id="username" name="username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password *</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="login-btn">LOGIN</button>
+          <div class="forgot-password">
+            <a href="#" class="forgot-link">Lost your password?</a>
+          </div>
+        </form>
+      </div>
+      <div class="tab-content" id="signupForm" style="display:none;">
+        <form class="signup-form">
+          <div class="form-group">
+            <label for="new-username">Username *</label>
+            <input type="text" id="new-username" name="new-username" placeholder="Username" required>
+          </div>
+          <div class="form-group">
+            <label for="new-email">Email *</label>
+            <input type="email" id="new-email" name="new-email" placeholder="Email" required>
+          </div>
+          <div class="form-group">
+            <label for="new-password">Password *</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Password" required>
+          </div>
+          <button type="submit" class="login-btn">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Code Entry Modal -->
+  <div id="codeModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Enter code</h2>
+        <button class="close-btn" onclick="closeCodeModal()">×</button>
+      </div>
+      <div id="codeSentText" class="code-sent-text"></div>
+      <form id="codeForm">
+        <div class="form-group">
+          <input type="text" id="codeInput" name="code" placeholder="6-digit code" maxlength="6" required class="code-input">
+        </div>
+        <button type="submit" class="login-btn code-submit-btn">Submit</button>
+      </form>
+      <div class="code-modal-links">
+        <a href="#" id="changeEmailLink" class="change-email-link">Sign in with a different email</a>
+      </div>
+      <div class="privacy-links">
+        <a href="#">Privacy policy</a> &nbsp; <a href="#">Terms of service</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Modal -->
+  <div id="wishlistModal" class="modal" style="display:none;">
+    <div class="modal-content wishlist-modal-content">
+      <div class="modal-header wishlist-modal-header">
+        <span class="wishlist-header-text">Wishlist (<span id="wishlistCount">0</span>)</span>
+        <button class="close-btn wishlist-close-btn" onclick="closeWishlistModal()">×</button>
+      </div>
+      <div id="wishlistItemsContainer" class="wishlist-items-container"></div>
+      <div id="emptyWishlistMsg" class="empty-wishlist-msg">There are no products on the Wishlist!</div>
+      <div class="wishlist-footer">
+        <a href="#" class="wishlist-footer-link">OPEN WISHLIST PAGE</a>
+        <a href="#" class="wishlist-footer-link">CONTINUE SHOPPING</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal" style="display:none;">
+    <div class="modal-content quick-view-content">
+      <button class="close-btn" onclick="closeQuickViewModal()" style="position: absolute; top: 20px; right: 20px; z-index: 10;">×</button>
+      <div class="quick-view-container">
+        <div class="quick-view-image">
+          <img id="quickViewImage" src="" alt="Product">
+        </div>
+        <div class="quick-view-info">
+          <p id="quickViewCategory" class="product-category"></p>
+          <h2 id="quickViewName" class="product-name"></h2>
+          <p id="quickViewPrice" class="product-price"></p>
+          <p id="quickViewDescription" class="product-description"></p>
+          <div class="quick-view-actions">
+            <button class="add-to-cart-btn" id="quickViewAddToCart">ADD TO CART</button>
+            <button class="action-icon wishlist-btn" id="quickViewWishlist" title="Add to Wishlist">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div id="checkoutModal" class="modal" style="display:none;">
+    <div class="modal-content checkout-content">
+      <div class="checkout-header">
+        <h2>Checkout</h2>
+        <button class="close-btn" onclick="closeCheckout()">×</button>
+      </div>
+      
+      <div class="checkout-container">
+        <div class="checkout-left">
+          <!-- Shipping Information -->
+          <div class="checkout-section">
+            <h3>Shipping Information</h3>
+            <form id="shippingForm" class="checkout-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="checkoutEmail" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+              </div>
+              <div class="form-group">
+                <label for="address">Street Address *</label>
+                <input type="text" id="address" name="address" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">City *</label>
+                  <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                  <label for="state">State/Province *</label>
+                  <input type="text" id="state" name="state" required>
+                </div>
+                <div class="form-group">
+                  <label for="zipCode">ZIP/Postal Code *</label>
+                  <input type="text" id="zipCode" name="zipCode" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="country">Country *</label>
+                <select id="country" name="country" required>
+                  <option value="">Select Country</option>
+                  <option value="US">United States</option>
+                  <option value="CA">Canada</option>
+                  <option value="UK">United Kingdom</option>
+                  <option value="AU">Australia</option>
+                  <option value="NP">Nepal</option>
+                  <option value="HK">Hong Kong</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </form>
+          </div>
+
+          <!-- Payment Information -->
+          <div class="checkout-section">
+            <h3>Payment Information</h3>
+            <div class="payment-methods">
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="card" checked>
+                <span>Credit/Debit Card</span>
+              </label>
+              <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="paypal">
+                <span>PayPal</span>
+              </label>
+            </div>
+            
+            <div id="cardPaymentForm" class="payment-form">
+              <div class="form-group">
+                <label for="cardNumber">Card Number *</label>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="expiryDate">Expiry Date *</label>
+                  <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV *</label>
+                  <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cardName">Name on Card *</label>
+                <input type="text" id="cardName" name="cardName" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkout-right">
+          <!-- Order Summary -->
+          <div class="order-summary">
+            <h3>Order Summary</h3>
+            <div id="checkoutItems" class="checkout-items"></div>
+            <div class="order-totals">
+              <div class="total-row">
+                <span>Subtotal:</span>
+                <span id="checkoutSubtotal">$0.00</span>
+              </div>
+              <div class="total-row">
+                <span>Shipping:</span>
+                <span id="checkoutShipping">$5.00</span>
+              </div>
+              <div class="total-row">
+                <span>Tax:</span>
+                <span id="checkoutTax">$0.00</span>
+              </div>
+              <div class="total-row total-final">
+                <span>Total:</span>
+                <span id="checkoutTotal">$0.00</span>
+              </div>
+            </div>
+            <button id="placeOrderBtn" class="place-order-btn" onclick="processPayment()">PLACE ORDER</button>
+            <p class="secure-payment">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              Secure Payment
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Confirmation Modal -->
+  <div id="orderConfirmationModal" class="modal" style="display:none;">
+    <div class="modal-content confirmation-content">
+      <div class="confirmation-icon">
+        <svg width="64" height="64" fill="none" stroke="#4CAF50" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+      <h2>Order Confirmed!</h2>
+      <p class="order-number">Order #<span id="orderNumber"></span></p>
+      <p class="confirmation-message">Thank you for your purchase! Your order has been received and will be processed shortly.</p>
+      <div class="confirmation-actions">
+        <button class="btn-primary" onclick="closeOrderConfirmation()">Continue Shopping</button>
+        <button class="btn-secondary" onclick="viewOrderDetails()">View Order Details</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shopping Cart Modal -->
+  <div id="cartModal" class="modal" style="display:none;">
+    <div class="modal-content cart-modal-content">
+      <div class="modal-header cart-modal-header">
+        <span class="cart-header-text">Shopping cart</span>
+        <span class="cart-close-text">CLOSE</span>
+        <button class="close-btn cart-close-btn" onclick="closeCartModal()">×</button>
+      </div>
+      <div id="cartItemsContainer" class="cart-items-container"></div>
+      <div id="emptyCartMsg" style="display:none; color:#555; text-align:center; margin:48px 0 48px 0; font-size:20px; font-family:serif;">Your cart is empty!</div>
+      <div id="cartFooter" style="border-top:1px solid #eee; padding:24px 24px 24px 24px;">
+        <div style="display:flex; justify-content:space-between; align-items:center; font-size:20px; font-family:serif; margin-bottom:18px;">
+          <span>Subtotal:</span>
+          <span id="cartSubtotal" style="font-weight:700;">$0.00</span>
+        </div>
+        <button style="width:100%; background:#fafafa; color:#222; font-size:16px; font-weight:700; border:none; border-radius:0; padding:14px 0; letter-spacing:0.08em; margin-bottom:12px; cursor:pointer;">VIEW CART</button>
+        <button onclick="openCheckout()" style="width:100%; background:#222; color:#fff; font-size:16px; font-weight:700; border:none; border-radius:0; padding:14px 0; letter-spacing:0.08em; cursor:pointer;">CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Toast Notification System
+    function showToast(message, type = 'success') {
+      const toastContainer = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `toast toast-${type}`;
+      
+      const icon = type === 'success' ? '✓' : type === 'error' ? '✕' : 'ℹ';
+      toast.innerHTML = `
+        <span class="toast-icon">${icon}</span>
+        <span class="toast-message">${message}</span>
+        <button class="toast-close" onclick="this.parentElement.remove()">×</button>
+      `;
+      
+      toastContainer.appendChild(toast);
+      
+      // Animate in
+      setTimeout(() => toast.classList.add('show'), 10);
+      
+      // Auto remove after 5 seconds
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+      }, 5000);
+    }
+
+    // Loading Overlay Functions
+    function showLoading() {
+      document.getElementById('loadingOverlay').style.display = 'flex';
+    }
+
+    function hideLoading() {
+      document.getElementById('loadingOverlay').style.display = 'none';
+    }
+
+    // Image Lazy Loading
+    function initLazyLoading() {
+      if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              if (img.dataset.src) {
+                img.src = img.dataset.src;
+                img.removeAttribute('data-src');
+                img.classList.add('loaded');
+                observer.unobserve(img);
+              }
+            }
+          });
+        });
+
+        document.querySelectorAll('img[data-src]').forEach(img => {
+          imageObserver.observe(img);
+        });
+      }
+    }
+
+    // Smooth Scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Newsletter Form Handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsletterForm = document.getElementById('newsletterForm');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = document.getElementById('newsletterEmail').value;
+          
+          // Validate email
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showToast('Please enter a valid email address', 'error');
+            return;
+          }
+          
+          // Simulate newsletter subscription
+          showLoading();
+          setTimeout(() => {
+            hideLoading();
+            showToast('Thank you for subscribing! Check your inbox for exclusive offers.', 'success');
+            newsletterForm.reset();
+          }, 1500);
+        });
+      }
+    });
+
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.indicator');
+
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => slide.classList.remove('active'));
+      indicators.forEach(indicator => indicator.classList.remove('active'));
+      
+      // Show current slide
+      slides[index].classList.add('active');
+      indicators[index].classList.add('active');
+    }
+
+    function changeSlide(direction) {
+      currentSlideIndex += direction;
+      
+      if (currentSlideIndex >= slides.length) {
+        currentSlideIndex = 0;
+      } else if (currentSlideIndex < 0) {
+        currentSlideIndex = slides.length - 1;
+      }
+      
+      showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(index) {
+      currentSlideIndex = index - 1;
+      showSlide(currentSlideIndex);
+    }
+
+    // Auto-advance slides every 5 seconds
+    setInterval(() => {
+      changeSlide(1);
+    }, 5000);
+
+    // Testimonial functionality
+    let currentTestimonialIndex = 0;
+    const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+    const testimonialDots = document.querySelectorAll('.testimonial-dot');
+
+    function showTestimonial(index) {
+      // Hide all testimonial slides
+      testimonialSlides.forEach(slide => slide.classList.remove('active'));
+      testimonialDots.forEach(dot => dot.classList.remove('active'));
+      
+      // Show current testimonial slide
+      testimonialSlides[index].classList.add('active');
+      testimonialDots[index].classList.add('active');
+    }
+
+    function currentTestimonial(index) {
+      currentTestimonialIndex = index - 1;
+      showTestimonial(currentTestimonialIndex);
+    }
+
+    // Auto-advance testimonials every 6 seconds
+    setInterval(() => {
+      currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonialSlides.length;
+      showTestimonial(currentTestimonialIndex);
+    }, 6000);
+
+    // Scroll to top function
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Modal open/close
+    function openLoginModal() {
+      document.getElementById('loginModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLoginModal() {
+      document.getElementById('loginModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function openCodeModal(email) {
+      document.getElementById('codeModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      document.getElementById('codeSentText').innerHTML = 'Sent to <b>' + email + '</b>';
+    }
+    function closeCodeModal() {
+      document.getElementById('codeModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    // Tab switching
+    function showTab(tab) {
+      if(tab === 'login') {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('signupForm').style.display = 'none';
+        document.getElementById('loginTab').classList.add('active');
+        document.getElementById('signupTab').classList.remove('active');
+      } else {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('signupForm').style.display = 'block';
+        document.getElementById('loginTab').classList.remove('active');
+        document.getElementById('signupTab').classList.add('active');
+      }
+    }
+    // Wishlist logic
+    let wishlist = [
+      // Example items (replace with your own logic to add/remove)
+      // {id:1, name:'Sample Product', image:'images/Garden1.jpg', category:'Tea'}
+    ];
+    function renderWishlist() {
+      const container = document.getElementById('wishlistItemsContainer');
+      const emptyMsg = document.getElementById('emptyWishlistMsg');
+      const count = document.getElementById('wishlistCount');
+      count.textContent = wishlist.length;
+      container.innerHTML = '';
+      if(wishlist.length === 0) {
+        emptyMsg.style.display = 'block';
+        return;
+      } else {
+        emptyMsg.style.display = 'none';
+      }
+      wishlist.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.alignItems = 'center';
+        div.style.marginBottom = '28px';
+        div.style.gap = '18px';
+        div.innerHTML = `
+          <button onclick="removeFromWishlist(${idx})" style="background:none; border:none; color:#222; font-size:26px; cursor:pointer; margin-right:10px;">&times;</button>
+          <img src="${item.image}" alt="${item.name}" style="width:70px; height:70px; object-fit:cover; border-radius:6px; margin-right:18px; border:1px solid #eee; background:#fff;">
+          <div style="flex:1; min-width:0;">
+            <div style="font-size:20px; font-weight:700; font-family:serif; margin-bottom:2px;">${item.name}</div>
+            <div style="font-size:17px; color:#888; margin-bottom:2px;">${item.price ? item.price : ''}</div>
+            <div style="font-size:16px; color:#888;">${item.date ? item.date : ''}</div>
+          </div>
+          <button onclick="addToCartFromWishlist(${idx})" style="background:#222; color:#fff; font-size:16px; font-weight:700; border:none; border-radius:0; padding:14px 48px; letter-spacing:0.08em; cursor:pointer;">ADD TO CART</button>
+        `;
+        container.appendChild(div);
+      });
+    }
+    function removeFromWishlist(idx) {
+      wishlist.splice(idx,1);
+      renderWishlist();
+    }
+    function addToCartFromWishlist(idx) {
+      const item = wishlist[idx];
+      // Parse price
+      let priceNum = 0;
+      if(item.price) {
+        priceNum = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+      }
+      // Check if already in cart
+      const existing = cart.find(c => c.name === item.name && c.image === item.image);
+      if(existing) {
+        existing.qty = (existing.qty || 1) + 1;
+      } else {
+        cart.push({
+          name: item.name,
+          image: item.image,
+          price: item.price,
+          priceNum: priceNum,
+          qty: 1
+        });
+      }
+      renderCart();
+      showToast('Added to cart: ' + item.name, 'success');
+      updateCartBadge();
+    }
+    // Modal open/close
+    function openWishlistModal() {
+      renderWishlist();
+      document.getElementById('wishlistModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeWishlistModal() {
+      document.getElementById('wishlistModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    // Attach to heart icon
+    document.addEventListener('DOMContentLoaded', function() {
+      var wishlistIcons = document.querySelectorAll('.icon-link svg');
+      // Find the heart icon by checking the path (unique for heart)
+      wishlistIcons.forEach(function(svg) {
+        if(svg.innerHTML.includes('M12 21s-6-4.35-8-7.5')) {
+          svg.parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            openWishlistModal();
+          });
+        }
+      });
+    });
+    // --- Add to Wishlist from product card ---
+    document.addEventListener('DOMContentLoaded', function() {
+      // Attach click to all wishlist-btns in product cards
+      document.querySelectorAll('.product-card').forEach(function(card) {
+        var wishlistBtn = card.querySelector('.wishlist-btn');
+        if(wishlistBtn) {
+          wishlistBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Get product info
+            var productId = card.dataset.productId || Date.now().toString();
+            var name = card.dataset.productName || card.querySelector('.product-name')?.textContent?.trim() || '';
+            var image = card.querySelector('img')?.getAttribute('src') || '';
+            var category = card.dataset.productCategory || card.querySelector('.product-category')?.textContent?.trim() || '';
+            var price = card.dataset.productPrice || card.querySelector('.product-price')?.textContent?.trim().replace('$', '') || '0.00';
+            // Check if already in wishlist
+            if(!wishlist.some(item => item.id === productId || (item.name === name && item.image === image))) {
+              wishlist.push({
+                id: productId,
+                name: name,
+                image: image,
+                category: category,
+                price: '$' + price
+              });
+              // Optionally, visually indicate (fill heart)
+              wishlistBtn.querySelector('svg').style.fill = '#e91e63';
+              wishlistBtn.querySelector('svg').style.stroke = '#e91e63';
+            }
+          });
+        }
+      });
+    });
+    // --- Cart logic ---
+    let cart = [];
+    function openCartModal() {
+      renderCart();
+      document.getElementById('cartModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeCartModal() {
+      document.getElementById('cartModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function renderCart() {
+      const container = document.getElementById('cartItemsContainer');
+      const emptyMsg = document.getElementById('emptyCartMsg');
+      const footer = document.getElementById('cartFooter');
+      const subtotalEl = document.getElementById('cartSubtotal');
+      container.innerHTML = '';
+      if(cart.length === 0) {
+        emptyMsg.style.display = 'block';
+        footer.style.display = 'none';
+        return;
+      } else {
+        emptyMsg.style.display = 'none';
+        footer.style.display = 'block';
+      }
+      let subtotal = 0;
+      cart.forEach((item, idx) => {
+        subtotal += (item.priceNum || 0) * (item.qty || 1);
+        const div = document.createElement('div');
+        div.style.display = 'flex';
+        div.style.alignItems = 'center';
+        div.style.marginBottom = '28px';
+        div.innerHTML = `
+          <img src="${item.image}" alt="${item.name}" style="width:90px; height:90px; object-fit:cover; border-radius:4px; margin-right:18px; border:1px solid #eee; background:#fff;">
+          <div style="flex:1; min-width:0;">
+            <div style="font-size:20px; font-weight:700; font-family:serif; margin-bottom:2px;">${item.name}</div>
+            <div style="font-size:17px; color:#222; margin-bottom:2px;">${item.qty || 1} × $${(item.priceNum || 0).toFixed(2)}</div>
+          </div>
+          <button onclick="removeFromCart(${idx})" style="background:none; border:none; color:#888; font-size:22px; cursor:pointer; margin-left:10px;" aria-label="Remove item">×</button>
+        `;
+        container.appendChild(div);
+      });
+      subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+      updateCartBadge();
+    }
+    function removeFromCart(idx) {
+      cart.splice(idx,1);
+      renderCart();
+      showToast('Item removed from cart', 'success');
+    }
+    // Add to cart from wishlist
+    function addToCartFromWishlist(idx) {
+      const item = wishlist[idx];
+      // Parse price
+      let priceNum = 0;
+      if(item.price) {
+        priceNum = parseFloat(item.price.replace(/[^\d.]/g, '')) || 0;
+      }
+      // Check if already in cart
+      const existing = cart.find(c => c.id === item.id || (c.name === item.name && c.image === item.image));
+      if(existing) {
+        existing.qty = (existing.qty || 1) + 1;
+        showToast(item.name + ' quantity updated in cart', 'success');
+      } else {
+        cart.push({
+          id: item.id || Date.now().toString(),
+          name: item.name,
+          image: item.image,
+          price: item.price,
+          priceNum: priceNum,
+          category: item.category || '',
+          qty: 1
+        });
+        showToast(item.name + ' added to cart', 'success');
+      }
+      renderCart();
+      updateCartBadge();
+      openCartModal();
+    }
+    // Attach to cart icon in header
+    document.addEventListener('DOMContentLoaded', function() {
+      var cartIcons = document.querySelectorAll('.icon-link svg');
+      cartIcons.forEach(function(svg) {
+        // Find the cart icon by checking for the unique path
+        if(svg.innerHTML.includes('M1 1h4l2.68 13.39')) {
+          svg.parentElement.addEventListener('click', function(e) {
+            e.preventDefault();
+            openCartModal();
+          });
+        }
+      });
+
+      // Add to cart functionality for product cards
+      document.querySelectorAll('.add-to-cart-btn').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const productCard = this.closest('.product-card');
+          const productId = productCard.dataset.productId;
+          const productName = productCard.dataset.productName || productCard.querySelector('.product-name')?.textContent?.trim() || 'Product';
+          const productImage = productCard.querySelector('.product-image img')?.getAttribute('src') || '';
+          const productPrice = productCard.dataset.productPrice || productCard.querySelector('.product-price')?.textContent?.trim().replace('$', '') || '0.00';
+          const priceNum = parseFloat(productPrice) || 0;
+          const productCategory = productCard.dataset.productCategory || '';
+
+          // Add to cart
+          const existing = cart.find(c => c.id === productId);
+          if(existing) {
+            existing.qty = (existing.qty || 1) + 1;
+            showToast(productName + ' quantity updated in cart', 'success');
+          } else {
+            cart.push({
+              id: productId,
+              name: productName,
+              image: productImage,
+              price: '$' + productPrice,
+              priceNum: priceNum,
+              category: productCategory,
+              qty: 1
+            });
+            showToast(productName + ' added to cart', 'success');
+          }
+          
+          // Update cart badge
+          updateCartBadge();
+        });
+      });
+    });
+
+    // Update cart badge count
+    function updateCartBadge() {
+      const cartBadges = document.querySelectorAll('.icon-link .icon-badge');
+      const totalItems = cart.reduce((sum, item) => sum + (item.qty || 1), 0);
+      cartBadges.forEach(function(badge) {
+        const svg = badge.nextElementSibling;
+        if(svg && svg.innerHTML.includes('M1 1h4l2.68 13.39')) {
+          badge.textContent = totalItems;
+        }
+      });
+    }
+    // Initialize lazy loading
+    initLazyLoading();
+
+    // Quick View Modal Functions
+    function openQuickView(button) {
+      const productCard = button.closest('.product-card');
+      const productImage = productCard.querySelector('.product-image img')?.getAttribute('src') || '';
+      const productName = productCard.querySelector('.product-name')?.textContent?.trim() || '';
+      const productCategory = productCard.querySelector('.product-category')?.textContent?.trim() || '';
+      const productPrice = productCard.querySelector('.product-price')?.textContent?.trim() || '';
+      
+      document.getElementById('quickViewImage').src = productImage;
+      document.getElementById('quickViewName').textContent = productName;
+      document.getElementById('quickViewCategory').textContent = productCategory;
+      document.getElementById('quickViewPrice').textContent = productPrice;
+      document.getElementById('quickViewDescription').textContent = 'Experience the authentic taste of premium Himalayan tea. Carefully selected and crafted to bring you the finest quality tea from Nepal.';
+      
+      // Store product card reference for add to cart
+      document.getElementById('quickViewModal').dataset.productCard = Array.from(document.querySelectorAll('.product-card')).indexOf(productCard);
+      
+      document.getElementById('quickViewModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function openQuickViewFromIcon(button) {
+      const productCard = button.closest('.product-card');
+      const quickViewBtn = productCard.querySelector('.quick-view-btn');
+      if (quickViewBtn) {
+        openQuickView(quickViewBtn);
+      }
+    }
+
+    function closeQuickViewModal() {
+      document.getElementById('quickViewModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    // Quick view add to cart
+    document.getElementById('quickViewAddToCart')?.addEventListener('click', function() {
+      const cardIndex = parseInt(document.getElementById('quickViewModal').dataset.productCard);
+      const productCards = document.querySelectorAll('.product-card');
+      if (productCards[cardIndex]) {
+        productCards[cardIndex].querySelector('.add-to-cart-btn')?.click();
+        closeQuickViewModal();
+      }
+    });
+
+    // Close quick view modal when clicking outside
+    window.addEventListener('click', function(event) {
+      const quickViewModal = document.getElementById('quickViewModal');
+      if (event.target === quickViewModal) {
+        closeQuickViewModal();
+      }
+    });
+
+    // Checkout Functions
+    function openCheckout() {
+      if (cart.length === 0) {
+        showToast('Your cart is empty', 'error');
+        return;
+      }
+      
+      closeCartModal();
+      renderCheckout();
+      document.getElementById('checkoutModal').style.display = 'block';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCheckout() {
+      document.getElementById('checkoutModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function renderCheckout() {
+      const checkoutItems = document.getElementById('checkoutItems');
+      const checkoutSubtotal = document.getElementById('checkoutSubtotal');
+      const checkoutTax = document.getElementById('checkoutTax');
+      const checkoutTotal = document.getElementById('checkoutTotal');
+      
+      checkoutItems.innerHTML = '';
+      
+      let subtotal = 0;
+      cart.forEach((item, idx) => {
+        const itemTotal = (item.priceNum || 0) * (item.qty || 1);
+        subtotal += itemTotal;
+        
+        const itemDiv = document.createElement('div');
+        itemDiv.className = 'checkout-item';
+        itemDiv.innerHTML = `
+          <img src="${item.image}" alt="${item.name}">
+          <div class="checkout-item-info">
+            <h4>${item.name}</h4>
+            <p>Qty: ${item.qty || 1}</p>
+          </div>
+          <div class="checkout-item-price">$${(itemTotal).toFixed(2)}</div>
+        `;
+        checkoutItems.appendChild(itemDiv);
+      });
+      
+      const shipping = 5.00;
+      const tax = subtotal * 0.08; // 8% tax
+      const total = subtotal + shipping + tax;
+      
+      checkoutSubtotal.textContent = '$' + subtotal.toFixed(2);
+      checkoutTax.textContent = '$' + tax.toFixed(2);
+      checkoutTotal.textContent = '$' + total.toFixed(2);
+    }
+
+    // Payment Processing
+    function processPayment() {
+      const shippingForm = document.getElementById('shippingForm');
+      const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+      
+      // Validate shipping form
+      if (!shippingForm.checkValidity()) {
+        shippingForm.reportValidity();
+        showToast('Please fill in all required fields', 'error');
+        return;
+      }
+      
+      // Validate card payment if selected
+      if (paymentMethod === 'card') {
+        const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+        const cardName = document.getElementById('cardName').value;
+        
+        if (!cardNumber || cardNumber.length < 13) {
+          showToast('Please enter a valid card number', 'error');
+          return;
+        }
+        if (!expiryDate || !/^\d{2}\/\d{2}$/.test(expiryDate)) {
+          showToast('Please enter a valid expiry date (MM/YY)', 'error');
+          return;
+        }
+        if (!cvv || cvv.length < 3) {
+          showToast('Please enter a valid CVV', 'error');
+          return;
+        }
+        if (!cardName) {
+          showToast('Please enter the name on card', 'error');
+          return;
+        }
+      }
+      
+      // Show loading
+      showLoading();
+      
+      // Simulate payment processing
+      setTimeout(() => {
+        hideLoading();
+        
+        // Generate order number
+        const orderNumber = 'NEP' + Date.now().toString().slice(-8);
+        
+        // Save order to localStorage (in real app, send to server)
+        const order = {
+          orderNumber: orderNumber,
+          items: cart.map(item => ({
+            id: item.id,
+            name: item.name,
+            qty: item.qty,
+            price: item.priceNum
+          })),
+          shipping: {
+            firstName: document.getElementById('firstName').value,
+            lastName: document.getElementById('lastName').value,
+            email: document.getElementById('checkoutEmail').value,
+            phone: document.getElementById('phone').value,
+            address: document.getElementById('address').value,
+            city: document.getElementById('city').value,
+            state: document.getElementById('state').value,
+            zipCode: document.getElementById('zipCode').value,
+            country: document.getElementById('country').value
+          },
+          paymentMethod: paymentMethod,
+          total: parseFloat(document.getElementById('checkoutTotal').textContent.replace('$', '')),
+          date: new Date().toISOString()
+        };
+        
+        // Save to orders
+        let orders = JSON.parse(localStorage.getItem('nepchaOrders') || '[]');
+        orders.push(order);
+        localStorage.setItem('nepchaOrders', JSON.stringify(orders));
+        
+        // Clear cart
+        cart = [];
+        updateCartBadge();
+        renderCart();
+        
+        // Show confirmation
+        document.getElementById('orderNumber').textContent = orderNumber;
+        closeCheckout();
+        document.getElementById('orderConfirmationModal').style.display = 'block';
+        showToast('Payment processed successfully!', 'success');
+      }, 2000);
+    }
+
+    function closeOrderConfirmation() {
+      document.getElementById('orderConfirmationModal').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
+    function viewOrderDetails() {
+      closeOrderConfirmation();
+      showToast('Order details feature coming soon!', 'info');
+    }
+
+    // Format card number input
+    document.getElementById('cardNumber')?.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\s/g, '');
+      let formattedValue = value.match(/.{1,4}/g)?.join(' ') || value;
+      e.target.value = formattedValue;
+    });
+
+    // Format expiry date input
+    document.getElementById('expiryDate')?.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length >= 2) {
+        value = value.slice(0, 2) + '/' + value.slice(2, 4);
+      }
+      e.target.value = value;
+    });
+
+    // CVV only numbers
+    document.getElementById('cvv')?.addEventListener('input', function(e) {
+      e.target.value = e.target.value.replace(/\D/g, '');
+    });
+
+    // Payment method toggle
+    document.querySelectorAll('input[name="paymentMethod"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        const cardForm = document.getElementById('cardPaymentForm');
+        if (this.value === 'card') {
+          cardForm.style.display = 'block';
+        } else {
+          cardForm.style.display = 'none';
+        }
+      });
+    });
+
+      // Close modal when clicking outside
+      window.onclick = function(event) {
+      var loginModal = document.getElementById('loginModal');
+      var codeModal = document.getElementById('codeModal');
+      var wishlistModal = document.getElementById('wishlistModal');
+      var cartModal = document.getElementById('cartModal');
+      if (event.target == loginModal) closeLoginModal();
+      if (event.target == codeModal) closeCodeModal();
+      if (event.target == wishlistModal) closeWishlistModal();
+      if (event.target == cartModal) closeCartModal();
+    }
+    // --- Signup flow ---
+    document.addEventListener('DOMContentLoaded', function() {
+      var signupForm = document.querySelector('.signup-form');
+      if(signupForm) {
+        signupForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var email = document.getElementById('new-email').value;
+          var username = document.getElementById('new-username').value;
+          var password = document.getElementById('new-password').value;
+          
+          // Validate email format
+          var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showToast('Please enter a valid email address', 'error');
+            return;
+          }
+          
+          // Validate password (minimum 6 characters)
+          if (password.length < 6) {
+            showToast('Password must be at least 6 characters long', 'error');
+            return;
+          }
+          
+          // Generate a random 6-digit code
+          var verificationCode = Math.floor(100000 + Math.random() * 900000);
+          console.log('Verification code:', verificationCode);
+          
+          // Store the code temporarily
+          window.tempVerificationCode = verificationCode;
+          window.tempUserData = { username, email, password };
+          
+          // Send verification code via EmailJS
+          if (typeof emailjs !== 'undefined') {
+            (function() {
+              emailjs.init("e8LMJTf_wukVAftsG"); // Replace with your EmailJS public key
+            })();
+            
+            var templateParams = {
+              email: email,
+              username: username,
+              verification_code: verificationCode,
+              message: "Your verification code for Nepcha account creation is: " + verificationCode
+            };
+            
+            console.log('Sending email with parameters:', templateParams);
+            
+            emailjs.send('service_n13suid', 'template_fur0h5m', templateParams)
+              .then(function(response) {
+                console.log('SUCCESS! Email sent successfully:', response);
+                // Show success message and open code modal
+                closeLoginModal();
+                setTimeout(function() {
+                  openCodeModal(email);
+                }, 400);
+              }, function(error) {
+                console.log('FAILED... Email sending failed:', error);
+                console.log('Error details:', error.text);
+                // Fallback: show code in alert for testing
+                alert('Email sending failed: ' + error.text + '\n\nFor testing, your verification code is: ' + verificationCode);
+                closeLoginModal();
+                setTimeout(function() {
+                  openCodeModal(email);
+                }, 400);
+              });
+          } else {
+            // Fallback: show code in alert for testing
+                showToast('Email sending failed. For testing, your verification code is: ' + verificationCode, 'error');
+            closeLoginModal();
+            setTimeout(function() {
+              openCodeModal(email);
+            }, 400);
+          }
+        });
+      }
+      // Code form submit
+      var codeForm = document.getElementById('codeForm');
+      if(codeForm) {
+        codeForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var code = document.getElementById('codeInput').value;
+          
+          // Check if the entered code matches the generated verification code
+          if(code == window.tempVerificationCode) {
+            closeCodeModal();
+            setTimeout(function() {
+              showToast('Account created successfully! Welcome to Nepcha, ' + window.tempUserData.username + '!', 'success');
+              // Clear temporary data
+              window.tempVerificationCode = null;
+              window.tempUserData = null;
+            }, 300);
+          } else {
+            document.getElementById('codeInput').style.borderColor = 'red';
+            document.getElementById('codeInput').value = '';
+            setTimeout(function() {
+              document.getElementById('codeInput').style.borderColor = '';
+            }, 1200);
+            showToast('Invalid verification code. Please check your email and try again.', 'error');
+          }
+        });
+      }
+      // Change email link
+      var changeEmail = document.getElementById('changeEmailLink');
+      if(changeEmail) {
+        changeEmail.onclick = function(e) {
+          e.preventDefault();
+          closeCodeModal();
+          setTimeout(function() {
+            openLoginModal();
+            showTab('signup');
+          }, 300);
+        }
+      }
+    });
+  </script>
+</body>
+</html> 

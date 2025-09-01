@@ -149,7 +149,7 @@
       
       <div class="products-grid">
         <!-- Product 1: Cinnamon Plum -->
-        <div class="product-card" data-product-id="1" data-product-name="Cinnamon Plum" data-product-price="18.02" data-product-category="Iced Teas">
+        <div class="product-card" data-product-id="1" data-product-name="Cinnamon Plum" data-product-price="18.02" data-product-category="Iced Teas" data-product-description="A refreshing blend of warm cinnamon and sweet plum flavors, perfect for iced tea. This Himalayan tea is handpicked from high-altitude gardens in Nepal, offering a unique combination of spicy and fruity notes. Rich in antioxidants and naturally caffeine-free, it's ideal for any time of day. Brew hot or cold for a delightful experience.">
           <div class="product-image">
             <img src="images/cinnamon-plum.jpg" alt="Cinnamon Plum Tea">
             <div class="hover-overlay">
@@ -160,6 +160,7 @@
             <p class="product-category">Iced Teas</p>
             <h3 class="product-name">Cinnamon Plum</h3>
             <p class="product-price">$18.02</p>
+            <p class="product-short-description">A refreshing blend of warm cinnamon and sweet plum flavors, perfect for iced tea. Handpicked from high-altitude Himalayan gardens.</p>
             <div class="product-actions">
               <button class="add-to-cart-btn">ADD TO CART</button>
               <div class="action-icons">
@@ -185,7 +186,7 @@
         </div>
 
         <!-- Product 2: English Breakfast -->
-        <div class="product-card" data-product-id="2" data-product-name="English Breakfast" data-product-price="11.85" data-product-category="Classic Teas">
+        <div class="product-card" data-product-id="2" data-product-name="English Breakfast" data-product-price="11.85" data-product-category="Classic Teas" data-product-description="A robust and full-bodied black tea blend, perfect for starting your day. Sourced from premium Nepali tea gardens at elevations of 1,500-2,000 meters, this classic blend offers a rich, malty flavor with hints of honey and citrus. High in antioxidants and providing a gentle energy boost, it pairs beautifully with milk and honey. Each cup delivers the authentic taste of Himalayan tea traditions.">
           <div class="product-image">
             <img src="images/english-breakfast.jpg" alt="English Breakfast Tea">
             <div class="hover-overlay">
@@ -196,6 +197,7 @@
             <p class="product-category">Classic Teas</p>
             <h3 class="product-name">English Breakfast</h3>
             <p class="product-price">$11.85</p>
+            <p class="product-short-description">A robust and full-bodied black tea blend, perfect for starting your day. Sourced from premium Nepali tea gardens at 1,500-2,000 meters.</p>
             <div class="product-actions">
               <button class="add-to-cart-btn">ADD TO CART</button>
               <div class="action-icons">
@@ -221,7 +223,7 @@
         </div>
 
         <!-- Product 3: White Peony -->
-        <div class="product-card" data-product-id="3" data-product-name="White Peony" data-product-price="16.19" data-product-category="Loose Leaf">
+        <div class="product-card" data-product-id="3" data-product-name="White Peony" data-product-price="16.19" data-product-category="Loose Leaf" data-product-description="A delicate and elegant white tea with subtle floral notes. Grown in the pristine Himalayan highlands of Nepal, White Peony is made from young tea buds and leaves, offering a light, sweet flavor with hints of melon and fresh grass. This premium loose-leaf tea is minimally processed, preserving its natural antioxidants and delicate character. Perfect for afternoon relaxation and meditation.">
           <div class="product-image">
             <img src="images/white-peony.jpg" alt="White Peony Tea">
             <div class="hover-overlay">
@@ -232,6 +234,7 @@
             <p class="product-category">Loose Leaf</p>
             <h3 class="product-name">White Peony</h3>
             <p class="product-price">$16.19</p>
+            <p class="product-short-description">A delicate and elegant white tea with subtle floral notes. Grown in pristine Himalayan highlands, offering light, sweet flavor with hints of melon.</p>
             <div class="product-actions">
               <button class="add-to-cart-btn">ADD TO CART</button>
               <div class="action-icons">
@@ -257,7 +260,7 @@
         </div>
 
         <!-- Product 4: Blueberry Hibiscus -->
-        <div class="product-card" data-product-id="4" data-product-name="Blueberry Hibiscus" data-product-price="10.07" data-product-category="Tea Bags">
+        <div class="product-card" data-product-id="4" data-product-name="Blueberry Hibiscus" data-product-price="10.07" data-product-category="Tea Bags" data-product-description="A vibrant and tangy herbal blend combining sweet blueberries with tart hibiscus flowers. This caffeine-free tea is packed with vitamin C and antioxidants, supporting immune health and digestion. The beautiful ruby-red infusion offers a refreshing, slightly tart flavor that's naturally sweet. Perfect for iced tea, this blend is ideal for those seeking a healthy, flavorful alternative to traditional teas.">
           <div class="product-image">
             <img src="images/blueberry-hibiscus.jpg" alt="Blueberry Hibiscus Tea">
             <div class="hover-overlay">
@@ -268,6 +271,229 @@
             <p class="product-category">Tea Bags</p>
             <h3 class="product-name">Blueberry Hibiscus</h3>
             <p class="product-price">$10.07</p>
+            <p class="product-short-description">A vibrant and tangy herbal blend combining sweet blueberries with tart hibiscus flowers. Caffeine-free and packed with vitamin C.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5: Himalayan Green Tea -->
+        <div class="product-card" data-product-id="5" data-product-name="Himalayan Green Tea" data-product-price="14.50" data-product-category="Loose Leaf" data-product-description="Premium green tea cultivated in the pristine Himalayan mountains of Nepal at elevations above 1,800 meters. This organic green tea offers a fresh, grassy flavor with subtle vegetal notes and a light, clean finish. Rich in EGCG antioxidants and L-theanine, it promotes mental clarity and supports metabolism. Handpicked and carefully processed to preserve its natural health benefits and delicate flavor profile.">
+          <div class="product-image">
+            <img src="images/green-tea.jpg" alt="Himalayan Green Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Loose Leaf</p>
+            <h3 class="product-name">Himalayan Green Tea</h3>
+            <p class="product-price">$14.50</p>
+            <p class="product-short-description">Premium green tea cultivated in pristine Himalayan mountains above 1,800 meters. Fresh, grassy flavor with subtle vegetal notes.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6: Darjeeling Black Tea -->
+        <div class="product-card" data-product-id="6" data-product-name="Darjeeling Black Tea" data-product-price="19.99" data-product-category="Loose Leaf" data-product-description="The 'Champagne of Teas' - a premium first flush Darjeeling from the Himalayan foothills. This exquisite black tea offers a light, muscatel flavor with floral undertones and a bright, golden liquor. Grown in the same terroir as Nepali teas, this high-altitude tea is handpicked during the spring harvest, ensuring the finest quality. Perfect for afternoon tea, it pairs beautifully with light pastries and offers a sophisticated tea experience.">
+          <div class="product-image">
+            <img src="images/darjeeling-tea.jpg" alt="Darjeeling Black Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Loose Leaf</p>
+            <h3 class="product-name">Darjeeling Black Tea</h3>
+            <p class="product-price">$19.99</p>
+            <p class="product-short-description">The 'Champagne of Teas' - premium first flush Darjeeling with light, muscatel flavor and floral undertones. Handpicked during spring harvest.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 7: Jasmine Pearl -->
+        <div class="product-card" data-product-id="7" data-product-name="Jasmine Pearl" data-product-price="22.50" data-product-category="Loose Leaf" data-product-description="Hand-rolled green tea pearls scented with fresh jasmine flowers. This premium tea from Himalayan gardens offers an intoxicating floral aroma and a delicate, sweet flavor. Each pearl unfurls beautifully when steeped, releasing layers of jasmine fragrance. Rich in antioxidants and low in caffeine, this tea is perfect for evening relaxation. The careful hand-rolling process ensures each pearl contains the finest tea leaves, creating a luxurious tea experience.">
+          <div class="product-image">
+            <img src="images/jasmine-pearl.jpg" alt="Jasmine Pearl Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Loose Leaf</p>
+            <h3 class="product-name">Jasmine Pearl</h3>
+            <p class="product-price">$22.50</p>
+            <p class="product-short-description">Hand-rolled green tea pearls scented with fresh jasmine flowers. Intoxicating floral aroma with delicate, sweet flavor.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 8: Chai Masala -->
+        <div class="product-card" data-product-id="8" data-product-name="Chai Masala" data-product-price="12.75" data-product-category="Tea Bags" data-product-description="Authentic Nepali masala chai blend with warming spices. This traditional tea combines premium black tea with cardamom, cinnamon, ginger, cloves, and black pepper - creating a rich, aromatic experience. Perfect for morning energy or afternoon comfort, this spiced tea is traditionally brewed with milk and sweetener. Each tea bag contains the perfect balance of spices, delivering the authentic taste of Himalayan chai culture in every cup.">
+          <div class="product-image">
+            <img src="images/chai-masala.jpg" alt="Chai Masala Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Tea Bags</p>
+            <h3 class="product-name">Chai Masala</h3>
+            <p class="product-price">$12.75</p>
+            <p class="product-short-description">Authentic Nepali masala chai with cardamom, cinnamon, ginger, cloves, and black pepper. Rich, aromatic traditional blend.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 9: Oolong Tea -->
+        <div class="product-card" data-product-id="9" data-product-name="Himalayan Oolong" data-product-price="21.25" data-product-category="Loose Leaf" data-product-description="A semi-oxidized tea that bridges the gap between green and black tea. This premium oolong from Nepali highlands offers a complex flavor profile with notes of stone fruit, honey, and a subtle floral finish. The leaves are carefully processed using traditional methods, creating a tea that can be steeped multiple times, each infusion revealing new layers of flavor. Rich in polyphenols and known for supporting metabolism, this tea is perfect for tea connoisseurs seeking depth and complexity.">
+          <div class="product-image">
+            <img src="images/oolong-tea.jpg" alt="Himalayan Oolong Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Loose Leaf</p>
+            <h3 class="product-name">Himalayan Oolong</h3>
+            <p class="product-price">$21.25</p>
+            <p class="product-short-description">Semi-oxidized tea with complex flavor profile - notes of stone fruit, honey, and subtle floral finish. Can be steeped multiple times.</p>
+            <div class="product-actions">
+              <button class="add-to-cart-btn">ADD TO CART</button>
+              <div class="action-icons">
+                <button class="action-icon wishlist-btn" title="Add to Wishlist">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M12 21s-6-4.35-8-7.5C2 10 4 6 8 6c2 0 4 2 4 2s2-2 4-2c4 0 6 4 4 7.5C18 16.65 12 21 12 21z"/>
+                  </svg>
+                </button>
+                <button class="action-icon quick-view-icon" title="Quick View" onclick="openQuickViewFromIcon(this)">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8"/>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                  </svg>
+                </button>
+                <button class="action-icon compare-btn" title="Compare">
+                  <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 10: Chamomile Herbal -->
+        <div class="product-card" data-product-id="10" data-product-name="Chamomile Herbal" data-product-price="9.99" data-product-category="Herbal Teas" data-product-description="A soothing, caffeine-free herbal tea made from premium chamomile flowers. This gentle tea offers a light, apple-like flavor with floral notes, perfect for relaxation and promoting restful sleep. Known for its calming properties, chamomile supports digestion and helps reduce stress. Grown in the clean mountain air of the Himalayas, this organic herbal tea is ideal for evening rituals, meditation, or whenever you need a moment of tranquility.">
+          <div class="product-image">
+            <img src="images/chamomile-tea.jpg" alt="Chamomile Herbal Tea" onerror="this.src='images/Background1.jpg'">
+            <div class="hover-overlay">
+              <button class="quick-view-btn" onclick="openQuickView(this)">Quick View</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <p class="product-category">Herbal Teas</p>
+            <h3 class="product-name">Chamomile Herbal</h3>
+            <p class="product-price">$9.99</p>
+            <p class="product-short-description">Soothing, caffeine-free herbal tea with light, apple-like flavor and floral notes. Perfect for relaxation and restful sleep.</p>
             <div class="product-actions">
               <button class="add-to-cart-btn">ADD TO CART</button>
               <div class="action-icons">
@@ -804,6 +1030,16 @@
                 <span>Credit/Debit Card</span>
               </label>
               <label class="payment-method">
+                <input type="radio" name="paymentMethod" value="esewa">
+                <span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <path d="M9 12l2 2 4-4"/>
+                  </svg>
+                  eSewa
+                </span>
+              </label>
+              <label class="payment-method">
                 <input type="radio" name="paymentMethod" value="paypal">
                 <span>PayPal</span>
               </label>
@@ -827,6 +1063,35 @@
               <div class="form-group">
                 <label for="cardName">Name on Card *</label>
                 <input type="text" id="cardName" name="cardName" required>
+              </div>
+            </div>
+
+            <div id="esewaPaymentForm" class="payment-form" style="display: none;">
+              <div class="esewa-info">
+                <div class="esewa-logo">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="#00A651">
+                    <rect x="3" y="3" width="18" height="18" rx="2" fill="#00A651"/>
+                    <path d="M9 12l2 2 4-4" stroke="white" stroke-width="2" fill="none"/>
+                  </svg>
+                  <span class="esewa-brand">eSewa</span>
+                </div>
+                <p class="esewa-description">Pay securely with your eSewa wallet. Enter your eSewa ID or mobile number.</p>
+              </div>
+              <div class="form-group">
+                <label for="esewaId">eSewa ID / Mobile Number *</label>
+                <input type="text" id="esewaId" name="esewaId" placeholder="98XXXXXXXX or your eSewa ID" maxlength="20" required>
+                <small class="form-hint">Enter your 10-digit mobile number or eSewa username</small>
+              </div>
+              <div class="form-group">
+                <label for="esewaPin">eSewa PIN *</label>
+                <input type="password" id="esewaPin" name="esewaPin" placeholder="Enter your eSewa PIN" maxlength="6" required>
+                <small class="form-hint">6-digit PIN for eSewa transactions</small>
+              </div>
+              <div class="esewa-security">
+                <svg width="16" height="16" fill="none" stroke="#00A651" stroke-width="2" viewBox="0 0 24 24">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+                <span>Your payment is secured by eSewa</span>
               </div>
             </div>
           </div>
@@ -1372,15 +1637,16 @@
     function openQuickView(button) {
       const productCard = button.closest('.product-card');
       const productImage = productCard.querySelector('.product-image img')?.getAttribute('src') || '';
-      const productName = productCard.querySelector('.product-name')?.textContent?.trim() || '';
-      const productCategory = productCard.querySelector('.product-category')?.textContent?.trim() || '';
+      const productName = productCard.dataset.productName || productCard.querySelector('.product-name')?.textContent?.trim() || '';
+      const productCategory = productCard.dataset.productCategory || productCard.querySelector('.product-category')?.textContent?.trim() || '';
       const productPrice = productCard.querySelector('.product-price')?.textContent?.trim() || '';
+      const productDescription = productCard.dataset.productDescription || 'Experience the authentic taste of premium Himalayan tea. Carefully selected and crafted to bring you the finest quality tea from Nepal.';
       
       document.getElementById('quickViewImage').src = productImage;
       document.getElementById('quickViewName').textContent = productName;
       document.getElementById('quickViewCategory').textContent = productCategory;
       document.getElementById('quickViewPrice').textContent = productPrice;
-      document.getElementById('quickViewDescription').textContent = 'Experience the authentic taste of premium Himalayan tea. Carefully selected and crafted to bring you the finest quality tea from Nepal.';
+      document.getElementById('quickViewDescription').textContent = productDescription;
       
       // Store product card reference for add to cart
       document.getElementById('quickViewModal').dataset.productCard = Array.from(document.querySelectorAll('.product-card')).indexOf(productCard);
@@ -1485,7 +1751,7 @@
         return;
       }
       
-      // Validate card payment if selected
+      // Validate payment based on selected method
       if (paymentMethod === 'card') {
         const cardNumber = document.getElementById('cardNumber').value.replace(/\s/g, '');
         const expiryDate = document.getElementById('expiryDate').value;
@@ -1506,6 +1772,32 @@
         }
         if (!cardName) {
           showToast('Please enter the name on card', 'error');
+          return;
+        }
+      } else if (paymentMethod === 'esewa') {
+        const esewaId = document.getElementById('esewaId').value.trim();
+        const esewaPin = document.getElementById('esewaPin').value;
+        
+        // Validate eSewa ID (10 digits for mobile or alphanumeric username)
+        if (!esewaId) {
+          showToast('Please enter your eSewa ID or mobile number', 'error');
+          return;
+        }
+        // Check if it's a mobile number (10 digits starting with 98 or 97)
+        const isMobile = /^(98|97)\d{8}$/.test(esewaId);
+        // Check if it's a valid eSewa username (alphanumeric, 3-20 chars)
+        const isUsername = /^[a-zA-Z0-9_]{3,20}$/.test(esewaId);
+        
+        if (!isMobile && !isUsername) {
+          showToast('Please enter a valid eSewa ID (username) or 10-digit mobile number starting with 98 or 97', 'error');
+          return;
+        }
+        if (!esewaPin || esewaPin.length !== 6) {
+          showToast('Please enter a valid 6-digit eSewa PIN', 'error');
+          return;
+        }
+        if (!/^\d{6}$/.test(esewaPin)) {
+          showToast('eSewa PIN must be exactly 6 digits', 'error');
           return;
         }
       }
@@ -1541,6 +1833,13 @@
             country: document.getElementById('country').value
           },
           paymentMethod: paymentMethod,
+          paymentDetails: paymentMethod === 'esewa' ? {
+            esewaId: document.getElementById('esewaId').value,
+            // Don't store PIN for security
+          } : paymentMethod === 'card' ? {
+            cardLast4: document.getElementById('cardNumber').value.slice(-4),
+            cardName: document.getElementById('cardName').value
+          } : {},
           total: parseFloat(document.getElementById('checkoutTotal').textContent.replace('$', '')),
           date: new Date().toISOString()
         };
@@ -1555,11 +1854,17 @@
         updateCartBadge();
         renderCart();
         
-        // Show confirmation
+        // Show confirmation with payment method specific message
+        const paymentMessage = paymentMethod === 'esewa' 
+          ? 'Payment processed via eSewa successfully!' 
+          : paymentMethod === 'paypal'
+          ? 'Payment processed via PayPal successfully!'
+          : 'Payment processed successfully!';
+        
         document.getElementById('orderNumber').textContent = orderNumber;
         closeCheckout();
         document.getElementById('orderConfirmationModal').style.display = 'block';
-        showToast('Payment processed successfully!', 'success');
+        showToast(paymentMessage, 'success');
       }, 2000);
     }
 
@@ -1594,14 +1899,33 @@
       e.target.value = e.target.value.replace(/\D/g, '');
     });
 
+    // eSewa ID validation (10 digits for mobile or alphanumeric for username)
+    document.getElementById('esewaId')?.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\s/g, '');
+      // Allow numbers and alphanumeric for eSewa ID
+      e.target.value = value;
+    });
+
+    // eSewa PIN only numbers (6 digits)
+    document.getElementById('esewaPin')?.addEventListener('input', function(e) {
+      e.target.value = e.target.value.replace(/\D/g, '').slice(0, 6);
+    });
+
     // Payment method toggle
     document.querySelectorAll('input[name="paymentMethod"]').forEach(function(radio) {
       radio.addEventListener('change', function() {
         const cardForm = document.getElementById('cardPaymentForm');
+        const esewaForm = document.getElementById('esewaPaymentForm');
+        
+        // Hide all payment forms
+        cardForm.style.display = 'none';
+        esewaForm.style.display = 'none';
+        
+        // Show selected payment form
         if (this.value === 'card') {
           cardForm.style.display = 'block';
-        } else {
-          cardForm.style.display = 'none';
+        } else if (this.value === 'esewa') {
+          esewaForm.style.display = 'block';
         }
       });
     });
